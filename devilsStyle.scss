@@ -1,3 +1,4 @@
+@import './Scss/abstracts/mixins';
 @import './Scss/abstracts/variables';
 
 @import './Scss/base/animations';
@@ -7,6 +8,12 @@
 
 @import './Scss/components/button';
 @import './Scss/components/card';
+@import './Scss/components/composition';
 
 @import './Scss/layout/grid';
 @import './Scss/layout/header';
+@import './Scss/layout/navigation';
+
+
+
+@import './Scss/pages/home';

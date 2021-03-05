@@ -1,17 +1,17 @@
 .header {
-  height: 95vh;
+  height: 100vh;
   position: relative;
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url('img/bandPhoto.jpg');
+    url('/img/bandPhoto.jpg');
   background-size: cover;
   background-position: top;
 
   //   Polygon Shape Background
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
 
   &__text-box {
     //   Center Element with Relation to Width of the Element
