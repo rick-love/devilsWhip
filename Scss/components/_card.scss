@@ -44,13 +44,6 @@
           $color-tertiary-dark
         );
       }
-      &-4 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light,
-          $color-primary-dark
-        );
-      }
     }
   }
 
@@ -64,7 +57,7 @@
   //   Front Side Styling
   &__picture {
     background-size: cover;
-    height: 33rem;
+    height: 23rem;
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
@@ -76,7 +69,7 @@
           $color-secondary-light,
           $color-secondary-dark
         ),
-        url('../../css/img/vocals.jpg');
+        url('/img/vocals.jpg');
     }
     &--2 {
       background-image: linear-gradient(
@@ -84,7 +77,7 @@
           $color-primary-light,
           $color-primary-dark
         ),
-        url('../../css/img/guitar.jpg');
+        url('/img/guitar.jpg');
     }
     &--3 {
       background-image: linear-gradient(
@@ -92,15 +85,7 @@
           $color-tertiary-light,
           $color-tertiary-dark
         ),
-        url('../../css/img/drummer.jpg');
-    }
-    &--4 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light,
-          $color-primary-dark
-        ),
-        url('../../css/img/bass.jpg');
+        url('/img/drummer.jpg');
     }
   }
   &__heading {
@@ -134,12 +119,6 @@
       background-image: linear-gradient(
         to right bottom,
         rgba($color-tertiary-light, 0.85) rgba($color-tertiary-dark, 0.85)
-      );
-    }
-    &--4 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.85) rgba($color-primary-dark, 0.85)
       );
     }
   }
@@ -182,5 +161,57 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  /*
+  *
+  *
+  *
+  // START OF MEDIA QUERY
+  *
+  *
+  *
+  */
+
+  @include respond(tablet-portrait) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0deg);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    //   Back Side Styling
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+    &__price-value {
+      font-size: 6rem;
+    }
   }
 }
